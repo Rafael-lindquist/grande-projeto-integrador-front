@@ -1,0 +1,85 @@
+import { DashboardData } from "@/lib/api/types";
+
+export const successMock: DashboardData = {
+  generatedAt: "2026-05-29T16:00:00Z",
+  overview: {
+    totalCanteiros: 3,
+    avgTemperature: 24.6,
+    avgHumidity: 66,
+    totalWaterUsedToday: 42,
+    waterSavings: 18,
+    canteirosHealthy: 2,
+    canteirosWarning: 1,
+    canteirosCritical: 0,
+  },
+  canteiros: [
+    {
+      id: "canteiro-01",
+      name: "Alface Crespa",
+      plant: "Lactuca sativa",
+      emoji: "🥬",
+      status: "healthy",
+      currentTemp: 23.4,
+      currentHumidity: 67,
+      currentSoilMoisture: 58,
+      currentLight: 12400,
+      lastWateredAt: "2026-05-29T15:45:00Z",
+      readings: [
+        { timestamp: "2026-05-29T12:00:00Z", temperature: 22.8, humidity: 69, soilMoisture: 61, lightLevel: 9800, irrigationOn: false, sensorStatus: "online" },
+        { timestamp: "2026-05-29T13:00:00Z", temperature: 23.1, humidity: 68, soilMoisture: 60, lightLevel: 11050, irrigationOn: false, sensorStatus: "online" },
+        { timestamp: "2026-05-29T14:00:00Z", temperature: 23.3, humidity: 67, soilMoisture: 59, lightLevel: 11900, irrigationOn: false, sensorStatus: "online" },
+        { timestamp: "2026-05-29T15:00:00Z", temperature: 23.4, humidity: 67, soilMoisture: 58, lightLevel: 12400, irrigationOn: true, sensorStatus: "online" },
+      ],
+      alerts: [
+        { id: "a1", kind: "info", message: "Irrigação executada automaticamente às 15:00.", timestamp: "2026-05-29T15:00:00Z" },
+      ],
+    },
+    {
+      id: "canteiro-02",
+      name: "Tomate Cereja",
+      plant: "Solanum lycopersicum",
+      emoji: "🍅",
+      status: "warning",
+      currentTemp: 26.1,
+      currentHumidity: 55,
+      currentSoilMoisture: 41,
+      currentLight: 14800,
+      lastWateredAt: "2026-05-29T14:20:00Z",
+      readings: [
+        { timestamp: "2026-05-29T12:00:00Z", temperature: 25.4, humidity: 58, soilMoisture: 48, lightLevel: 13200, irrigationOn: false, sensorStatus: "online" },
+        { timestamp: "2026-05-29T13:00:00Z", temperature: 25.9, humidity: 57, soilMoisture: 46, lightLevel: 14000, irrigationOn: false, sensorStatus: "online" },
+        { timestamp: "2026-05-29T14:00:00Z", temperature: 26.0, humidity: 56, soilMoisture: 44, lightLevel: 14600, irrigationOn: false, sensorStatus: "online" },
+        { timestamp: "2026-05-29T15:00:00Z", temperature: 26.1, humidity: 55, soilMoisture: 41, lightLevel: 14800, irrigationOn: false, sensorStatus: "online" },
+      ],
+      alerts: [
+        { id: "a2", kind: "warning", message: "Umidade do solo abaixo do ideal no canteiro 02.", timestamp: "2026-05-29T15:05:00Z" },
+      ],
+    },
+    {
+      id: "canteiro-03",
+      name: "Manjericão",
+      plant: "Ocimum basilicum",
+      emoji: "🌿",
+      status: "healthy",
+      currentTemp: 24.2,
+      currentHumidity: 72,
+      currentSoilMoisture: 64,
+      currentLight: 10100,
+      lastWateredAt: "2026-05-29T14:50:00Z",
+      readings: [
+        { timestamp: "2026-05-29T12:00:00Z", temperature: 23.9, humidity: 73, soilMoisture: 66, lightLevel: 9400, irrigationOn: false, sensorStatus: "online" },
+        { timestamp: "2026-05-29T13:00:00Z", temperature: 24.0, humidity: 73, soilMoisture: 66, lightLevel: 9700, irrigationOn: false, sensorStatus: "online" },
+        { timestamp: "2026-05-29T14:00:00Z", temperature: 24.1, humidity: 72, soilMoisture: 65, lightLevel: 10000, irrigationOn: false, sensorStatus: "online" },
+        { timestamp: "2026-05-29T15:00:00Z", temperature: 24.2, humidity: 72, soilMoisture: 64, lightLevel: 10100, irrigationOn: false, sensorStatus: "online" },
+      ],
+      alerts: [
+        { id: "a3", kind: "info", message: "Crescimento estável no canteiro 03.", timestamp: "2026-05-29T15:10:00Z" },
+      ],
+    },
+  ],
+  recentAlerts: [
+    { id: "a1", kind: "info", message: "Irrigação executada automaticamente às 15:00.", timestamp: "2026-05-29T15:00:00Z" },
+    { id: "a2", kind: "warning", message: "Umidade do solo abaixo do ideal no canteiro 02.", timestamp: "2026-05-29T15:05:00Z" },
+    { id: "a3", kind: "info", message: "Crescimento estável no canteiro 03.", timestamp: "2026-05-29T15:10:00Z" },
+  ],
+};

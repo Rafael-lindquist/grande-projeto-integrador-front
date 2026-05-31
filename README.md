@@ -1,26 +1,21 @@
-# Projeto Integrador — Sistema de Monitoramento de Horta
+# A1.7 Dashboard E2E v0.1
 
-## Equipe
+Pacote com os arquivos sugeridos para aplicar no repositório do frontend.
 
-- Rafael Carvalho
-- Lucas Dziaduk
-- Pedro Valença
-- Rafael Lindquist
+## O que contém
+- fetch layer isolada
+- mocks realistas
+- loading/error/empty/partial states
+- página do dashboard
+- teste com Jest + React Testing Library
+- documentação atualizada
 
-## Tema
+## Como usar
+Copie os arquivos para os mesmos caminhos no repositório do frontend.
+Depois instale as dependências de teste e rode:
 
-Sistema de monitoramento de horta utilizando dispositivos ESP32, integração com serviços em nuvem e uma aplicação cliente para visualização de dados.
-
-## Escopo
-
-O sistema realiza a coleta de dados ambientais (umidade do solo e temperatura) via ESP32, transmite os dados para uma API em nuvem, armazena as informações e disponibiliza visualização em tempo real e histórico para o usuário.
-
-## Como rodar / verificar
-
-TBD
-
-## Links
-
-- Processo: ./process.md
-- Métricas: ./metrics.md
-- Requisitos (SRS): ./requirements/srs.md
+```bash
+npm install
+npm test
+npm run dev
+```
